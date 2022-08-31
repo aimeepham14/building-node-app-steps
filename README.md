@@ -1,28 +1,18 @@
-# Building a New Node/NPM Project
+# NPM Project Steps
 
-## Setting up a Node Project
-* Create a new folder for your project
-* Initialize NPM inside the project folder with the command ``` npm init ```
-* Make sure that the file ``` index.js ``` is created
-* Run the file via the command line with the command ``` node index.js ```
+## Create a Project From Scratch
+### Setting Up The JavaScript
+* Mkdir and CD into a new project directory
+* Run ``` npm init ``` to create a  ``` package.json ``` or use ``` npm init -y ``` to answer yes to all prompts
+* Install needed packages with ``` npm install < package names > ```
+* touch ``` index.js ``` (or other main entry point file)
 
-## Creating Your Module
-* Inside the folder created above, create a javascript file called ``` myModule.js ```
-* Assign a key-value pair to ``` module.exports ```. For example:
-``` module.exports.beBasic = () => console.log("That's so fetch!") ```
-* To import your module in ``` index.js ``` write the following code in your ``` index.js ``` file:
-```const myModule = require('./myModule.js') ```
-* Utilize the module_name with the function or operation tied with it. For example:
-``` myModule.beBasic(); ```
-* Run ``` index.js ``` via the command line: ``` node index.js ```
+### Setting Up the Git Repo
+* Run ``` git init ``` to create a new repo in the project directory
+* Create a ``` .gitignore ``` file and add ``` node_modules ``` to it. Be slick with ``` echo node_modules >> .gitignore ```
+* Check to make sure node_modules folder is not being tracked with a ``` git status ```
+* Add and commit your work
 
-## Node Packages
-* To download a package and install it for a specific project, make sure you're inside the directory of the project you want to use the package in and in the command line type the code:
-``` npm i [package name] ```
-* To quit any program runnin in the terminal press CTRL+C
-* Create a file called ``` .gitignore ``` to contain a list of files and folders that git should not be tracking
-
-## Cloning and Setting Up a Repo That Uses Node Packages
-* Fork and clone the repo with the command: ``` git clone [URL] ```
-* Install the dependencies with the command ``` npi i ```
-* Create a ``` .gitignore ``` file 
+## Cloning a Project Down
+* Clone the repo down to your local and cd into the new directory
+* Run ``` npm install ``` or ``` npm i ``` to install the required packages from the package.json
